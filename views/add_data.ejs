@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/addData.css">
+    <title>ADD DATA</title>
+</head>
+<body>
+    <button class="get_back"><a href="/">GET BACK</a></button>
+    <%if (warning != 'false') {%>
+        <% if (warning == 2) {%>
+            <p class="warning">Upload Completed</p>
+        <%}else if (warning == 'true') {%>
+            <p class="warning">Face already exist!!!</p>
+        <%} else {%>
+            <p class="warning">Only <%= warning %> Files are Uploaded. Needed 2 Files</p>
+        <%}%>
+    <%}%>
+    <form action="/add_data" method="POST" enctype="multipart/form-data">
+    
+        <h2 class="h2">ADD FACES</h2>
+        <div class="info_name">
+            <input type="text" name="name" id="name" class="name" placeholder="Face Name" autocomplete="off" required>
+        </div>
+        <div class="choose_file">
+            <input type="file" name="choose" id="choose" class="choose" multiple="multiple" required>
+            <div class="span">Choose Files</div>
+            <div class="file_info">
+
+            </div>
+        </div>
+        <div class="submit">
+            <input type="submit" value="Add Face" name="send" class="send" id="send">
+        </div>
+    </form>
+    <script src="/js/app.js"></script>
+</body>
+</html>

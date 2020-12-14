@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="/css/style.css">
+  <script defer src="/js/face-api.min.js"></script>
+  <script defer src="/js/script.js"></script>
+  <title>Face Recognition</title>
+</head>
+<body>
+  <button class="get_back"><a href="/add_data">ADD FACE</a></button>
+  <input type="file" id="imageUpload">
+  <button id="chooseImage">CHOOSE IMAGE</button>
+  <p id="warn">Please wait until all background Processes are completed!!!</p>
+  <%for (let i = 0; i < data.length; i++) {%>
+    <p class="hidden" hidden><%= data[i].name %></p>
+    <%}%>
+  <script type="module">
+
+  </script>
+</body>
+</html>
